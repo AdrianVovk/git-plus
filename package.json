@@ -1,5 +1,5 @@
 {
-  "name": "git-support-ide",
+  "name": "git-support",
   "main": "./lib/git-plus",
   "version": "0.0.2",
   "description": "Git support for the Substance IDE",
