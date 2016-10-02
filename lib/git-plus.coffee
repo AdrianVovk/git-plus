@@ -97,11 +97,11 @@ module.exports =
   subscriptions: null
 
   activate: (state) ->
-    enableSyntaxHighlighting = atom.config.get('git').syntaxHighlighting;
+    enableSyntaxHighlighting = atom.config.get('git.syntaxHighlighting')
     if enableSyntaxHighlighting
       atom.grammars.addGrammar(diffGrammar)
     else
-      atom.grammars.loadGrammarSync(baseGrammar);
+      atom.grammars.loadGrammarSync(baseGrammar)
     @subscriptions = new CompositeDisposable
     repos = atom.project.getRepositories().filter (r) -> r?
     if repos.length is 0
