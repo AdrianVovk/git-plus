@@ -168,7 +168,6 @@ module.exports =
 
   consumeStatusBar: (statusBar) ->
     @setupBranchesMenuToggle statusBar
-    @setupOutputViewToggle statusBar
 
   setupOutputViewToggle: (statusBar) ->
     div = document.createElement 'div'
@@ -178,7 +177,10 @@ module.exports =
     link = document.createElement 'a'
     link.appendChild icon
     link.onclick = (e) -> OutputViewManager.getView().toggle()
-    atom.tooltips.add div, { title: "Toggle Git Output Console"}
+    atom.tooltips.add div,
+      title: "Toggle Git Output Console"
+      keyBindingCommand: "git:commit"
+      keyBindingTarget: 'atom-workspace'
     div.appendChild link
     @statusBarTile = statusBar.addRightTile item: div, priority: 0
 
