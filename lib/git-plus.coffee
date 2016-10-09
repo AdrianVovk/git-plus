@@ -163,28 +163,8 @@ module.exports =
 
   deactivate: ->
     @subscriptions.dispose()
-    @statusBarTile?.destroy()
-    delete @statusBarTile
 
   consumeStatusBar: (statusBar) ->
-    @setupBranchesMenuToggle statusBar
-
-  setupOutputViewToggle: (statusBar) ->
-    div = document.createElement 'div'
-    div.classList.add 'inline-block'
-    icon = document.createElement 'span'
-    icon.classList.add 'icon', 'icon-pin'
-    link = document.createElement 'a'
-    link.appendChild icon
-    link.onclick = (e) -> OutputViewManager.getView().toggle()
-    atom.tooltips.add div,
-      title: "Toggle Git Output Console"
-      keyBindingCommand: "git:commit"
-      keyBindingTarget: 'atom-workspace'
-    div.appendChild link
-    @statusBarTile = statusBar.addRightTile item: div, priority: 0
-
-  setupBranchesMenuToggle: (statusBar) ->
     statusBar.getRightTiles().some ({item}) =>
       if item?.classList?.contains? 'git-view'
         $(item).find('.git-branch').on 'click', (e) ->
