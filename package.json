@@ -1,7 +1,7 @@
 {
   "name": "git-support-ide",
   "main": "./lib/git-plus",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Git support for the Substance IDE",
   "keywords": [
     "git"
