@@ -1,1 +1,1 @@
-module.exports = require('atom-notify')('Git-Plus')
+module.exports = require('atom-notify')('Git')
