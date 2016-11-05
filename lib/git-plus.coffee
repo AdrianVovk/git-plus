@@ -135,6 +135,7 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:remove', -> git.getRepo().then((repo) -> GitRemove(repo, showSelector: true))
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:remove-current-file', -> git.getRepo().then((repo) -> GitRemove(repo))
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:reset', -> git.getRepo().then((repo) -> git.reset(repo))
+    @subscriptions.add atom.commands.add 'atom-workspace', 'git:reset-hard', -> git.getRepo().then((repo) -> git.hardReset(repo))
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:show', -> git.getRepo().then((repo) -> GitShow(repo))
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:log', -> git.getRepo().then((repo) -> GitLog(repo))
     @subscriptions.add atom.commands.add 'atom-workspace', 'git:log-current-file', -> git.getRepo().then((repo) -> GitLog(repo, onlyCurrentFile: true))

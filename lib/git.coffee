@@ -71,6 +71,9 @@ module.exports = git =
   reset: (repo) ->
     git.cmd(['reset', 'HEAD'], cwd: repo.getWorkingDirectory()).then () -> notifier.addSuccess 'All changes unstaged'
 
+  hardReset: (repo) ->
+    git.cmd(['reset', '--hard', 'HEAD'], cwd: repo.getWorkingDirectory()).then () -> notifier.addSuccess 'All changes unstaged'
+
   status: (repo) ->
     git.cmd(['status', '--porcelain', '-z'], cwd: repo.getWorkingDirectory())
     .then (data) -> if data.length > 2 then data.split('\0')[...-1] else []
