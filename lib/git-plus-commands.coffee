@@ -71,7 +71,7 @@ getCommands = ->
       commands.push ['git-plus:push', 'Push', -> GitPush(repo)]
       commands.push ['git-plus:remove', 'Remove', -> GitRemove(repo, showSelector: true)]
       commands.push ['git-plus:reset', 'Reset HEAD', -> git.reset(repo)]
-      commands.push ['git-plus:reset-hard', 'Hard Reset HEAD', -> git.reset(repo)]
+      commands.push ['git-plus:reset-hard', 'Hard Reset HEAD', -> git.hardReset(repo)]
       commands.push ['git-plus:show', 'Show', -> GitShow(repo)]
       commands.push ['git-plus:stage-files', 'Stage Files', -> GitStageFiles(repo)]
       commands.push ['git-plus:unstage-files', 'Unstage Files', -> GitUnstageFiles(repo)]
