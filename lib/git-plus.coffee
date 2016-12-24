@@ -166,8 +166,6 @@ module.exports =
     @subscriptions.dispose()
 
   consumeStatusBar: (statusBar) ->
-<<<<<<< HEAD
-=======
     @setupBranchesMenuToggle statusBar
     @setupOutputViewToggle statusBar
 
@@ -184,7 +182,6 @@ module.exports =
     @statusBarTile = statusBar.addRightTile item: div, priority: 0
 
   setupBranchesMenuToggle: (statusBar) ->
->>>>>>> parent of f177bc7... Get rid of pin item
     statusBar.getRightTiles().some ({item}) =>
       if item?.classList?.contains? 'git-view'
         $(item).find('.git-branch').on 'click', (e) ->
