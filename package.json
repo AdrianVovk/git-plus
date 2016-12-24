@@ -1,7 +1,7 @@
 {
   "name": "git-support-ide",
   "main": "./lib/git-plus",
-  "version": "1.3.4",
+  "version": "6.0.0",
   "description": "Git support for the Substance IDE",
   "keywords": [
     "git"
@@ -10,6 +10,11 @@
     "status-bar": {
       "versions": {
         "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "autosave": {
+      "versions": {
+        "1.0.0": "consumeAutosave"
       }
     }
   },
@@ -21,10 +26,13 @@
   "dependencies": {
     "atom-notify": "^1.1.0",
     "atom-space-pen-views": "^2.0.3",
-    "flavored-path": "0.0.8",
     "fs-plus": "^2.2.0",
     "fuzzaldrin": "^1.2.0",
     "underscore": "^1.8.3",
-    "underscore-plus": "^1.6.6"
+    "underscore-plus": "^1.6.6",
+    "ansi-to-html": "^0.4.1"
+  },
+  "devDependencies": {
+    "quibble": "^0.3.0"
   }
 }
