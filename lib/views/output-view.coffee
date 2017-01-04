@@ -2,7 +2,7 @@ AnsiToHtml = require 'ansi-to-html'
 ansiToHtml = new AnsiToHtml()
 {$, ScrollView} = require 'atom-space-pen-views'
 
-defaultMessage = 'Nothing new to show'
+defaultMessage = 'Git Console Empty'
 
 class OutputView extends ScrollView
   @content: ->

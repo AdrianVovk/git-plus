@@ -167,11 +167,11 @@ module.exports =
     div = document.createElement 'div'
     div.classList.add 'inline-block'
     icon = document.createElement 'span'
-    icon.classList.add 'icon', 'icon-pin'
+    icon.classList.add 'icon', 'icon-versions'
     link = document.createElement 'a'
     link.appendChild icon
     link.onclick = (e) -> OutputViewManager.getView().toggle()
-    atom.tooltips.add div, { title: "Toggle Git Output Console"}
+    atom.tooltips.add div, { title: "Git Log"}
     div.appendChild link
     @statusBarTile = statusBar.addRightTile item: div, priority: 0
 
